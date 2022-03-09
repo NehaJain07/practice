@@ -1,0 +1,16 @@
+<div class="content">
+  <h1>Hello {{title}} start</h1>
+  <div><a routerLink="employee-list" [queryParams]="{EmployeeName: ename }" >Employeelist</a> | <a routerLink="employee-details" >EmployeeDetails</a> | <a routerLink="form-ex" >Formex</a> | <a routerLink="basic-test" [queryParams]="{prntData: parentData}" >Basic Example</a> | <a routerLink="test" [queryParams]="{item: user | json}" >Looping Test</a> | <a routerLink="user">Http get</a> | <a routerLink="user-form">Http form</a></div>
+ <!--  <app-employee-list [EmployeeName]="ename"></app-employee-list>
+  <app-employee-details></app-employee-details> -->
+  <!-- <app-test [prntData]="parentData" (updTitleEv)="updateTitle($event)"></app-test>
+  <button (click)="updateData()">Click here</button>
+  <h2 appBoldRed>Resuable code using parent class</h2>
+  <div *ngFor="let u of user">
+    <app-test-new [item]="u"></app-test-new>
+  </div> -->
+<!--   <app-form-ex></app-form-ex>-->
+
+
+<router-outlet ></router-outlet>
+</div>

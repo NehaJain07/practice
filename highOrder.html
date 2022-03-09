@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <p>hell sddsad o world</p> 
+</body>
+<script>
+   var users = [{
+      first_name: "Brithany",
+      last_name: "Allison",
+      birthday: 1993,
+      profession:'Artist'
+  },
+  {
+      first_name: "Sonya",
+      last_name: "Slowers",
+      birthday: 1967,
+      profession:'Artist'
+  },
+  {
+      first_name: "Ashley",
+      last_name: "Pratt",
+      birthday: 1987,
+      profession:'Operator'
+  },
+  {
+      first_name: "Sam",
+      last_name: "Smith",
+      birthday: 1998,
+      profession:'Engineer'
+  }
+];
+    var age =[21, 22, 34, 12, 10, 56, 88];
+    //foreach array
+      /*  for(var s in users){
+        console.log(users[s].last_name);
+    } */
+    /* for (let i=0; i<users.length; i++){
+        console.log(users[i].first_name);
+    }
+    users.forEach(function(usr){
+        console.log(usr.birthday);
+    }); */
+    /* console.clear(); */
+
+    //filter
+   /*  var old_age= [];
+    for(let i=0; i < age.length; i++){
+        if(age[i] >= 24){
+            old_age.push(age[i]);
+        }   
+    }
+    console.log(old_age) */ 
+   /*  var oldAge = age.filter(function(age){
+        if(age >= 24){
+            return true;
+        }
+    }) */
+   /*  var oldAge = age.filter(age =>(age >= 24))
+    console.log(oldAge) */
+// filter birthday year
+/* let birth=[];
+for(let i=0; i < users.length; i++){
+        if(users[i].birthday >= 1985){
+            birth.push(users[i].birthday);
+        }   
+    }
+    console.log(birth); */
+    /* let prof=[];
+for(let i=0; i < users.length; i++){
+        if(users[i].profession == 'Operator'){
+            prof.push(users[i]);
+        }   
+    }
+    console.log(prof); */
+    /* var prof=users.filter(profs => profs.profession == 'Operator');
+    console.log(prof); */
+   /*  var birth=users.filter(profs => (profs.birthday >= 1980 && profs.birthday <= 1994) );
+    console.log(birth); */
+
+    //map
+ /*    var ageSqu=age.map(ag => ag * 2);
+    console.log(ageSqu); */
+    /* var usr=users.map(birth => birth.first_name);
+    console.log(usr); */
+    //sort
+/*     var bith=users.sort((a,b) => (a.birthday > b.birthday ? 1 : -1));
+    console.log(bith);
+    var ageAsc=age.sort((a,b) => a - b);
+    console.log(ageAsc); */
+    /* var agedsc=age.sort((a,b) => b - a);
+    console.log(agedsc); */
+//reduce
+/* var ageTo=age.reduce((total, age) => total + age , 0);
+console.log(ageTo); */
+var bithTo=users.reduce((total, birth) => total + birth.birthday ,0);
+console.log(bithTo);
+</script>
+</html>

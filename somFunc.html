@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Important function</title>
+   </head>
+   <body>
+      <script>//function reverse
+         arrayToClone = [1, 2, 3, 4, 5, 6, 11117, 2118, 1 ,4, 0];
+             function rev(str){
+               var result="";
+               for(var i= str.length-1; i >=0; i--){
+                 if(typeof str === 'object'){
+                   result += str[i] + " ";
+                 }else{
+                 result += str[i];
+               }
+               }
+             return result
+             }
+             console.log(rev(arrayToClone));
+              console.log(rev("hello this is sample reverse"));
+         
+              //function maxvalue
+               function maxval(arr){
+                 var maxval = arr[0];
+                 for(var i=1; i < arr.length; i++){
+                   var currentval=arr[i];
+                   if(currentval > maxval){
+                     maxval = currentval;
+                   } 
+                 }
+                 return maxval
+               }
+                 //function maxvalue
+               function minvalu(arr){
+                 var minvalu = arr[0];
+                 for(var i=1; i < arr.length; i++){
+                   var currentval=arr[i];
+                   if(currentval < minvalu){
+                     minvalu = currentval;
+                   } 
+                 }
+                 return minvalu
+               }
+              console.log(maxval(arrayToClone));
+               console.log(minvalu(arrayToClone));
+                 
+                 //function unique
+          function unq(arr){
+        var a = [];
+         for (var i=0; i < arr.length; i++)
+             if (a.indexOf(arr[i]) === -1 && arr[i] !== ''){
+                 a.push(arr[i]);
+             }
+                return a;
+               }
+               console.log(arrayToClone);
+               console.log(unq(arrayToClone));
+      </script>
+   </body>
+</html>
+

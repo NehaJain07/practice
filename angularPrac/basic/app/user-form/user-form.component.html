@@ -1,0 +1,12 @@
+<p>user-form works!</p>
+<form [formGroup]="loginForm" style="text-align:left; width:300px; margin:0px auto" (ngSubmit)="loginUser()">
+<!-- <form #httpForm="ngForm" style="text-align:left; width:300px; margin:0px auto" (ngSubmit)="getDataForm(httpForm.value)"> -->
+    <div><input type="text" formControlName="title" value=""></div>
+    <span style="font-size:12px; color:red;" *ngIf="title && title.invalid && title.touched">Please Enter title</span>
+    <div><textarea  name="body" formControlName="body" id="" cols="30" rows="10"></textarea></div>
+    <span style="font-size:12px; color:red;" *ngIf="body && body.invalid && body.touched">Please Enter content</span>
+    <!-- <div><input type="text" ngModel name="body" placeholder="Enter content" value=""></div> -->
+    <div><input type="number" formControlName="likes" value=""></div>
+    <span style="font-size:12px; color:red;" *ngIf="likes && likes.invalid && likes.touched">Please Enter number</span>
+    <div><button [disabled]="loginForm.invalid">Add user</button></div>
+</form>

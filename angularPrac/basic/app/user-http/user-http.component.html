@@ -1,0 +1,7 @@
+<h2>user-http works!</h2>
+<h3>Fetch data</h3>
+<div *ngFor="let user of userFetch">
+    {{ user.id }} - <small style="color:grey;text-transform: uppercase;">{{ user.title }}</small>
+    <div>{{ user.body | slice:0:70 }} ...</div>
+</div>
+
