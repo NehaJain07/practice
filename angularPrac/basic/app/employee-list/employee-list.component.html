@@ -1,4 +1,4 @@
 <p>employee-list works!</p>
-<div>Parent variable call : {{EmployeeName}}</div>
-<h2>Employee names:</h2>
-<div *ngFor="let e of employee">{{e.ename}}</div>
+<div *ngFor="let employ of employees">
+        {{employ.id}} - {{employ.name}}
+</div>

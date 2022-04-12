@@ -1,16 +1,16 @@
-<div class="content">
-  <h1>Hello {{title}} start</h1>
-  <div><a routerLink="employee-list" [queryParams]="{EmployeeName: ename }" >Employeelist</a> | <a routerLink="employee-details" >EmployeeDetails</a> | <a routerLink="form-ex" >Formex</a> | <a routerLink="basic-test" [queryParams]="{prntData: parentData}" >Basic Example</a> | <a routerLink="test" [queryParams]="{item: user | json}" >Looping Test</a> | <a routerLink="user">Http get</a> | <a routerLink="user-form">Http form</a></div>
- <!--  <app-employee-list [EmployeeName]="ename"></app-employee-list>
-  <app-employee-details></app-employee-details> -->
-  <!-- <app-test [prntData]="parentData" (updTitleEv)="updateTitle($event)"></app-test>
-  <button (click)="updateData()">Click here</button>
-  <h2 appBoldRed>Resuable code using parent class</h2>
-  <div *ngFor="let u of user">
-    <app-test-new [item]="u"></app-test-new>
-  </div> -->
-<!--   <app-form-ex></app-form-ex>-->
-
-
-<router-outlet ></router-outlet>
+<div class="app">
+    <nav> 
+          <ul> 
+            <li><a routerLink="/prac" queryParamsHandling="merge" [queryParams]="{'parentData':nameChild}">Practice</a></li> 
+            <li><a routerLink="/employee-list" routerLinkActive="active">Employee list</a></li> 
+            <li><a routerLink="/employee-details" routerLinkActive="active">Employee details</a></li> 
+            <li><a routerLink="/todo-list" routerLinkActive="active">Todo task</a></li> 
+            <li><a routerLink="/basic-form" routerLinkActive="active">Basic form</a></li> 
+            <li><a routerLink="/basic-bind" routerLinkActive="active">Basic Binding</a></li> 
+            <li><a routerLink="/reactive-form" routerLinkActive="active">Reactive Form</a></li> 
+            <li><a routerLink="/obsrv" routerLinkActive="active">Observable/subscribe</a></li> 
+          </ul> 
+        </nav> 
+    
 </div>
+<router-outlet></router-outlet>

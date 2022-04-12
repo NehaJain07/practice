@@ -1,3 +1,5 @@
-<p>employee-details works!</p>
-<h2>Employee names:</h2>
-<div *ngFor="let e of employee">{{e.id + "- "}}{{e.ename}}{{ "  and his/her age " + e.age}}</div>
+<p><b>{{"employee-details works!" | uppercase}}</b></p>
+{{errorMsg}}
+<div *ngFor="let employ of employees">
+        {{employ.id}} - {{employ.name}} - {{employ.age}}
+</div>

@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { EmpolyeeService } from '../empolyee.service';
-
+import { EmployJsonService } from '../employ-json.service';
+import { IEmployee } from '../employee';
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
-  styleUrls: ['./employee-details.component.css']
+  styles: [
+  ]
 })
 export class EmployeeDetailsComponent implements OnInit {
-  public employee:any=[];
-  constructor(private _employeeService:EmpolyeeService ) { }
+  public employees: IEmployee[] = [];
+  errorMsg = ""
+  constructor(private _employ: EmployJsonService) { }
 
-  ngOnInit(){
-    this.employee= this._employeeService.getEmployees();
+  ngOnInit(): void {
+    this._employ.getEmployee().subscribe(data => this.employees = data,
+      err => this.errorMsg = err)
   }
 
 }
